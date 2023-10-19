@@ -15,7 +15,7 @@ def register(request):
             
             send_registration_email.delay(user.email)
 
-            return redirect('mail/register.html')
+            return redirect('register.html')
     else:
         form = UserRegisterForm()
     return render(request, 'mail/register.html', {'form': form})
